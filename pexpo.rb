@@ -14,14 +14,14 @@ class Pexpo < Formula
     ENV["GOPATH"] = buildpath
     cd buildpath/"src/github.com/peco/peco" do
     
-    # Install Go dependencies
-    system "go", "get", "github.com/dariubs/percent"
-    system "go", "get", "github.com/mattn/go-runewidth"
-    system "go", "get", "github.com/nsf/termbox-go"
-    system "go", "get", "github.com/tatsushid/go-fastping"
+    	# Install Go dependencies
+    	system "go", "get", "github.com/dariubs/percent"
+    	system "go", "get", "github.com/mattn/go-runewidth"
+    	system "go", "get", "github.com/nsf/termbox-go"
+    	system "go", "get", "github.com/tatsushid/go-fastping"
 	  
-    # Build and install termshare
-    system "go", "build", "-o", "pexpo"
-    bin.install "pexpo"
+    	# Build and install termshare
+    	system "go", "build", "-o", "pexpo"
+    	bin.install "pexpo"
+    end
   end
-end
