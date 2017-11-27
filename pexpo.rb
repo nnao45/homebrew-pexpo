@@ -7,8 +7,20 @@ class Pexpo < Formula
   head "https://github.com/nnao45/pexpo.git"
   version "1.30"
 
+  depends_on "go" => :build
+  depends_on :hg => :build
+  
   def install
-    system "go", "build"
+    ENV["GOPATH"] = buildpath
+    
+    # Install Go dependencies
+    system "go", "get", "github.com/dariubs/percent"
+	  system "go", "get", "github.com/mattn/go-runewidth"
+	  system "go", "get", "github.com/nsf/termbox-go"
+	  system "go", "get", "github.com/tatsushid/go-fastping"
+    
+    # Build and install termshare
+    system "go", "build", "-o", "pexpo"
     bin.install "pexpo"
   end
 end
