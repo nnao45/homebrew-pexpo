@@ -15,10 +15,11 @@ class Pexpo < Formula
     
     # Install Go dependencies
     system "go", "get", "github.com/dariubs/percent"
-	  system "go", "get", "github.com/mattn/go-runewidth"
-	  system "go", "get", "github.com/nsf/termbox-go"
-	  system "go", "get", "github.com/tatsushid/go-fastping"
-    
+    system "go", "get", "github.com/mattn/go-runewidth"
+    system "go", "get", "github.com/nsf/termbox-go"
+    system "go", "get", "github.com/tatsushid/go-fastping"
+    system "unzip", "pexpo-1.30-darwin-amd64.zip"
+	  
     # Build and install termshare
     system "go", "build", "-o", "pexpo"
     bin.install "pexpo"
