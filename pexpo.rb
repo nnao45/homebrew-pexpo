@@ -3,7 +3,7 @@ require "formula"
 class Pexpo < Formula
   homepage "https://github.com/nnao45/pexpo"
   url "https://github.com/nnao45/pexpo/archive/1.34.tar.gz"
-  sha256 "9ff55d9173cd98c8e397658b9a314b4d815d5158be112c558bbbaa2a80fdbc3d"
+  sha256 "88cacfd9db8d29a731cff370ab7fe6e7a58ab4c68e8be15fa9a876c0da55c82b"
   head "https://github.com/nnao45/pexpo.git"
   version "1.34"
 
