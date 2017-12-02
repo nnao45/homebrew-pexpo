@@ -2,10 +2,10 @@ require "formula"
 
 class Pexpo < Formula
   homepage "https://github.com/nnao45/pexpo"
-  url "https://github.com/nnao45/pexpo/archive/1.33.tar.gz"
+  url "https://github.com/nnao45/pexpo/archive/1.34.tar.gz"
   sha256 "9ff55d9173cd98c8e397658b9a314b4d815d5158be112c558bbbaa2a80fdbc3d"
   head "https://github.com/nnao45/pexpo.git"
-  version "1.33"
+  version "1.34"
 
   depends_on "go" => :build
   depends_on :hg => :build
