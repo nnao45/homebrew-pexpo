@@ -13,8 +13,9 @@ class Pexpo < Formula
   
   def install
     #ENV["GLIDE_HOME"] = buildpath/"glide_home"
-    ENV["GLIDE_HOME"] = HOMEBREW_CACHE/"glide_home/#{name}"
     ENV["GOPATH"] = buildpath
+    ENV["GLIDE_HOME"] = HOMEBREW_CACHE/"glide_home/#{name}"
+    #ENV["GOPATH"] = buildpath
     (buildpath/"src/github.com/nnao45").install buildpath.children
     #(buildpath/"src/github.com/nnao45").mkpath
     #ln_s buildpath, buildpath/"src/github.com/nnao45/pexpo"
