@@ -1,7 +1,7 @@
 require "formula"
 
 class Pexpo < Formula
-  desx "Terminal Sending Ping Tool in Go."
+  desc "Terminal Sending Ping Tool in Go."
   homepage "https://github.com/nnao45/pexpo"
   url "https://github.com/nnao45/pexpo/archive/1.34.tar.gz"
   sha256 "88cacfd9db8d29a731cff370ab7fe6e7a58ab4c68e8be15fa9a876c0da55c82b"
