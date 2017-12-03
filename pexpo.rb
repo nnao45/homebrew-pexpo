@@ -12,19 +12,15 @@ class Pexpo < Formula
   
   def install
     ENV["GOPATH"] = buildpath
-    glidepath = buildpath/"src/github.com/nnao45/pexpo"
-    glidepath.install buildpath.children
     
     # Install Go dependencies
-    #system "go", "get", "github.com/dariubs/percent"
-    #system "go", "get", "github.com/mattn/go-runewidth"
-    #system "go", "get", "github.com/nsf/termbox-go"
-    #system "go", "get", "github.com/tatsushid/go-fastping"
+    system "go", "get", "github.com/dariubs/percent"
+    system "go", "get", "github.com/mattn/go-runewidth"
+    system "go", "get", "github.com/nsf/termbox-go"
+    system "go", "get", "github.com/tatsushid/go-fastping"
 	  
     # Build and install termshare
-    cd glidepath do
-      system "go", "build", "-o", "pexpo"
-      bin.install "pexpo"
+    system "go", "build", "-o", "pexpo"
+    bin.install "pexpo"
     end
   end
-end
