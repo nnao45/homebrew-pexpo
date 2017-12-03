@@ -25,7 +25,7 @@ class Pexpo < Formula
 	  
     # Build and install termshare
     cd buildpath/"src/github.com/nnao45/pexpo" do
-      system "glide", "install"
+      #system "glide", "install"
       system "go", "build", "-o", "pexpo"
       bin.install "pexpo"
     end
