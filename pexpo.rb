@@ -21,8 +21,10 @@ class Pexpo < Formula
     #system "go", "get", "github.com/nsf/termbox-go"
     #system "go", "get", "github.com/tatsushid/go-fastping"
 	  
+    system "ls"
     # Build and install termshare
     cd buildpath/"src/github.com/nnao45/pexpo" do
+      system "ls"
       system "glide", "install"
       system "go", "build", "-o", "pexpo"
       bin.install "pexpo"
