@@ -28,6 +28,7 @@ class Pexpo < Formula
     #cd buildpath/"pexpo" do
     #cd buildpath/"src/github.com/nnao45/pexpo" do
       system "pwd"
+      system "ls"
       system "cat", "glide.yaml"
       system "glide", "install"
       system "go", "build", "-o", "pexpo"
