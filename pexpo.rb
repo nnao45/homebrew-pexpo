@@ -14,8 +14,9 @@ class Pexpo < Formula
   def install
     ENV["GOPATH"] = buildpath
     ENV["GLIDE_HOME"] = buildpath/"glide_home"
-    (buildpath/"src/github.com/nnao45").mkpath
-    ln_s buildpath, buildpath/"src/github.com/nnao45/pexpo"
+    #(buildpath/"src/github.com/nnao45").mkpath
+    mkdir_p buildpath/"src/github.com/nnao45"
+    ln_sf buildpath, buildpath/"src/github.com/nnao45/pexpo"
     
     # Install Go dependencies
     #system "go", "get", "github.com/dariubs/percent"
