@@ -25,5 +25,6 @@ class Pexpo < Formula
     cd glidepath do
       system "go", "build", "-o", "pexpo"
       bin.install "pexpo"
+    end
   end
 end
