@@ -26,6 +26,7 @@ class Pexpo < Formula
 	  
     # Build and install termshare
     #cd buildpath/"src/github.com/nnao45/pexpo" do
+      sysmtem "pwd"
       system "cat", "glide.yaml"
       system "glide", "install"
       system "go", "build", "-o", "pexpo"
