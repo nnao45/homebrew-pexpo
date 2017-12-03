@@ -18,7 +18,7 @@ class Pexpo < Formula
     #ENV["GOPATH"] = buildpath
     #(buildpath/"src/github.com/nnao45").install buildpath.children
     (buildpath/"src/github.com/nnao45").mkpath
-    #ln_s buildpath, buildpath/"src/github.com/nnao45/pexpo"
+    ln_s buildpath, buildpath/"src/github.com/nnao45/pexpo"
     
     
     # Install Go dependencies
