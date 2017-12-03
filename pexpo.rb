@@ -28,11 +28,11 @@ class Pexpo < Formula
     #system "go", "get", "github.com/tatsushid/go-fastping"
 	  
     # Build and install termshare
-    #cd buildpath/"src/github.com/nnao45/pexpo" do
+    cd buildpath/"src/github.com/nnao45/pexpo" do
     #cd "src/github.com/nnao45/pexpo" do
       system "glide", "install"
       system "go", "build", "-o", "pexpo"
       bin.install "pexpo"
     end
   end
-#end
+end
