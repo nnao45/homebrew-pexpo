@@ -20,9 +20,10 @@ class Pexpo < Formula
     #(buildpath/"src/github.com/nnao45").mkpath
     #ln_s buildpath, buildpath/"src/github.com/nnao45/pexpo"
     
+    ENV["GLIDE_HOME"] = buildpath/"glide_home"
     ENV["GOPATH"] = buildpath
-    ENV["GLIDE_HOME"] = HOMEBREW_CACHE/"glide_home/#{name}"
-    (buildpath/"src/github.com/nnao45/pexpo").install buildpath.children
+    (buildpath/"src/github.com/nnao45/pexpo").mkpath
+    ln_s buildpath, buildpath/"src/github.com/nnao45/pexpo"
     
     # Install Go dependencies
     #system "go", "get", "github.com/dariubs/percent"
@@ -33,10 +34,10 @@ class Pexpo < Formula
     # Build and install termshare
     #cd buildpath/"src/github.com/nnao45/pexpo" do
     #cd "src/github.com/nnao45/pexpo" do
-    cd "src/github.com/nnao45/pexpo" do
+    #cd "src/github.com/nnao45/pexpo" do
       system "glide", "install"
       system "go", "build", "-o", "pexpo"
       bin.install "pexpo"
     end
   end
-end
+#end
