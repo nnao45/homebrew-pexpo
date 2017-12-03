@@ -12,10 +12,20 @@ class Pexpo < Formula
   depends_on "glide" => :build
   
   def install
-    ENV["GLIDE_HOME"] = buildpath/"glide_home"
+    #ENV["GLIDE_HOME"] = buildpath/"glide_home"
+    #ENV["GOPATH"] = buildpath
+    #(buildpath/"src/github.com/nnao45").mkpath
+    #ln_s buildpath, buildpath/"src/github.com/nnao45/pexpo"
+
+
     ENV["GOPATH"] = buildpath
-    (buildpath/"src/github.com/nnao45").mkpath
-    ln_s buildpath, buildpath/"src/github.com/nnao45/pexpo"
+    ENV["GLIDE_HOME"] = HOMEBREW_CACHE/"glide_home/#{name}"
+    (buildpath/"src/github.com/nnao45/pexpo").install buildpath.children
+    cd "src/github.com/nnao45/pexpo" do
+      #system "glide", "install"
+      #system "go", "build", "-o", bin/"peco", "cmd/peco/peco.go"
+      #prefix.install_metafiles
+
     
     # Install Go dependencies
     #system "go", "get", "github.com/dariubs/percent"
@@ -31,3 +41,4 @@ class Pexpo < Formula
     bin.install "pexpo"
     end
   end
+end
