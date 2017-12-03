@@ -18,17 +18,17 @@ class Pexpo < Formula
     #ENV["GOPATH"] = buildpath
     #(buildpath/"src/github.com/nnao45").install buildpath.children
     (buildpath/"src/github.com/nnao45").mkpath
-    ln_s buildpath, buildpath/"src/github.com/nnao45/pexpo"
+    #ln_s buildpath, buildpath/"src/github.com/nnao45/pexpo"
     
     
     # Install Go dependencies
-    system "go", "get", "github.com/dariubs/percent"
-    system "go", "get", "github.com/mattn/go-runewidth"
-    system "go", "get", "github.com/nsf/termbox-go"
-    system "go", "get", "github.com/tatsushid/go-fastping"
+    #system "go", "get", "github.com/dariubs/percent"
+    #system "go", "get", "github.com/mattn/go-runewidth"
+    #system "go", "get", "github.com/nsf/termbox-go"
+    #system "go", "get", "github.com/tatsushid/go-fastping"
 	  
     # Build and install termshare
-    #cd buildpath/"src/github.com/nnao45/pexpo" do
+    cd buildpath/"src/github.com/nnao45/pexpo" do
     #cd "src/github.com/nnao45/pexpo" do
       system "glide", "install"
       system "go", "build", "-o", "pexpo"
