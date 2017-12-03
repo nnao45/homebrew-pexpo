@@ -14,6 +14,7 @@ class Pexpo < Formula
     ENV["GOPATH"] = buildpath
     
     # Install Go dependencies
+    system "glide", "up"
     #system "go", "get", "github.com/dariubs/percent"
     #system "go", "get", "github.com/mattn/go-runewidth"
     #system "go", "get", "github.com/nsf/termbox-go"
