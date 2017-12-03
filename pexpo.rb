@@ -14,9 +14,9 @@ class Pexpo < Formula
   def install
     ENV["GOPATH"] = buildpath
     ENV["GLIDE_HOME"] = buildpath/"glide_home"
-    #(buildpath/"src/github.com/nnao45").mkpath
-    mkdir_p buildpath/"src/github.com/nnao45"
-    ln_sf buildpath, buildpath/"src/github.com/nnao45/pexpo"
+    (buildpath/"src/github.com/nnao45").mkpath
+    #mkdir_p buildpath/"src/github.com/nnao45"
+    ln_s buildpath, buildpath/"src/github.com/nnao45/pexpo"
     
     # Install Go dependencies
     #system "go", "get", "github.com/dariubs/percent"
@@ -25,7 +25,7 @@ class Pexpo < Formula
     #system "go", "get", "github.com/tatsushid/go-fastping"
 	  
     # Build and install termshare
-    cd buildpath/"pexpo" do
+    #cd buildpath/"pexpo" do
     #cd buildpath/"src/github.com/nnao45/pexpo" do
       system "pwd"
       system "cat", "glide.yaml"
@@ -34,4 +34,4 @@ class Pexpo < Formula
       bin.install "pexpo"
     end
   end
-end
+#end
