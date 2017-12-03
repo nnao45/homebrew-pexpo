@@ -9,18 +9,20 @@ class Pexpo < Formula
   version "1.34"
 
   depends_on "go" => :build
-  depends_on :hg => :build
+  depends_on "glide" => :build
   
   def install
     ENV["GOPATH"] = buildpath
+    ENV["GLIDE_HOME"] = buildpath/"glide_home"
     
     # Install Go dependencies
-    system "go", "get", "github.com/dariubs/percent"
-    system "go", "get", "github.com/mattn/go-runewidth"
-    system "go", "get", "github.com/nsf/termbox-go"
-    system "go", "get", "github.com/tatsushid/go-fastping"
+    #system "go", "get", "github.com/dariubs/percent"
+    #system "go", "get", "github.com/mattn/go-runewidth"
+    #system "go", "get", "github.com/nsf/termbox-go"
+    #system "go", "get", "github.com/tatsushid/go-fastping"
 	  
     # Build and install termshare
+    system "glide", "install"
     system "go", "build", "-o", "pexpo"
     bin.install "pexpo"
     end
