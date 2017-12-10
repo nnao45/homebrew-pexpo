@@ -19,7 +19,6 @@ class Pexpo < Formula
       system "make", "glide"
       system "make", "deps"
       system "make"
-      system "ls"
       bin.install "bin/pexpo"
     end
   end
