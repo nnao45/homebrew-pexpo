@@ -16,8 +16,8 @@ class Pexpo < Formula
     ENV["GLIDE_HOME"] = HOMEBREW_CACHE/"glide_home/#{name}"
     (buildpath/"src/github.com/nnao45/pexpo").install buildpath.children
     cd "src/github.com/nnao45/pexpo" do
-      system "glide", "install"
-      system "go", "build", "-o", "pexpo"
+      system "make", "glide"
+      system "make"
       bin.install "pexpo"
     end
   end
