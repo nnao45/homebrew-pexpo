@@ -17,7 +17,7 @@ class Pexpo < Formula
     (buildpath/"src/github.com/nnao45/pexpo").install buildpath.children
     cd "src/github.com/nnao45/pexpo" do
       system "make", "glide"
-      system "make"
+      system "make", "install"
       bin.install "pexpo"
     end
   end
