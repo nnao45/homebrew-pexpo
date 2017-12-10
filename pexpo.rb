@@ -20,6 +20,7 @@ class Pexpo < Formula
       system "make", "deps"
       system "make"
       bin.install "bin/pexpo"
+      system "make", "clean"
     end
   end
 end
