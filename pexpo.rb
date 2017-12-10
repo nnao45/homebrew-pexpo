@@ -18,6 +18,7 @@ class Pexpo < Formula
     cd "src/github.com/nnao45/pexpo" do
       system "make", "glide"
       system "make", "deps"
+      system "ls"
       system "make", "install"
       bin.install "pexpo"
     end
