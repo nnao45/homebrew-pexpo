@@ -3,10 +3,10 @@ require "formula"
 class Pexpo < Formula
   desc "Terminal sending ping tool written in Go."
   homepage "https://github.com/nnao45/pexpo"
-  url "https://github.com/nnao45/pexpo/archive/1.40.tar.gz"
-  sha256 "a732c32e558816a00b7c01028648694f490e97cf407a6bbf995261386d7e8c56"
+  url "https://github.com/nnao45/pexpo/archive/1.41.tar.gz"
+  sha256 "e8443a01c59d517e590f6c795aa3b3f4f93e4b1e215ab9592d075213d053338a"
   head "https://github.com/nnao45/pexpo.git"
-  version "1.40"
+  version "1.41"
 
   depends_on "go" => :build
   depends_on "glide" => :build
