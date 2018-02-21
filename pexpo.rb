@@ -4,7 +4,7 @@ class Pexpo < Formula
   desc "Terminal sending ping tool written in Go."
   homepage "https://github.com/nnao45/pexpo"
   url "https://github.com/nnao45/pexpo/archive/1.41.tar.gz"
-  sha256 "e8443a01c59d517e590f6c795aa3b3f4f93e4b1e215ab9592d075213d053338a"
+  sha256 "3122c9d273644c4733ec723f224b52fab8ccbaa0dc001b84dff7a0cf1454f1ab"
   head "https://github.com/nnao45/pexpo.git"
   version "1.41"
 
